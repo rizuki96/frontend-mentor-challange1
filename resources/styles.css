@@ -1,0 +1,32 @@
+@tailwind base;
+
+@tailwind components;
+
+@tailwind utilities;
+
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@500;700&display=swap");
+
+div .tooltip {
+  display: block;
+  width: 13rem;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  border-radius: 0.5rem;
+  padding: 0.75rem 0;
+  position: absolute;
+  z-index: 1;
+  bottom: 30%;
+  right: 1rem;
+}
+
+div .tooltip::after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  margin-left: -5px;
+  border-width: 5px;
+  border-style: solid;
+  border-color: black transparent transparent transparent;
+}

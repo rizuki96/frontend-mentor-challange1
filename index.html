@@ -1,36 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
 
   <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
-  
+
   <title>Frontend Mentor | Article preview component</title>
 
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <!-- * Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <link rel="stylesheet" href="/public/css/styles.css">
   <style>
-    .attribution { font-size: 11px; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
+    .attribution {
+      font-size: 11px;
+      text-align: center;
+    }
+
+    .attribution a {
+      color: hsl(228, 45%, 44%);
+    }
   </style>
 </head>
-<body>
 
-  Shift the overall look and feel by adding these wonderful 
-  touches to furniture in your home
+<body class="font-manrope w-full h-screen bg-grayish-lightGrayBlue" style="font-size: 13px;">
 
-  Ever been in a room and felt like something was missing? Perhaps 
-  it felt slightly bare and uninviting. I’ve got some simple tips 
-  to help you make any room feel complete.
+  <div class="container mx-auto p-10 ">
+    <!-- * Card Container * -->
+    <div class="relative mx-56">
+      <div class="tooltip">
+        <div class="flex items-center justify-center">
+          <p class="uppercase text-xs tracking-widest font-light mr-4">Share</p>
+          <a href="#">
+            <img class="mr-4" src="/images/icon-facebook.svg" alt="facebook">
+          </a>
+          <a href="#">
+            <img class="mr-4" src="/images/icon-twitter.svg" alt="twitter">
+          </a>
+          <a href="#">
+            <img src="/images/icon-pinterest.svg" alt="pinterest">
+          </a>
+        </div>
+      </div>
+      <div class="my-6 xl:my-10 mx-auto bg-white rounded-lg max-w-xs xl:max-w-screen-sm
+                  overflow-hidden flex items-center flex-col xl:flex-row
+                  justify-between shadow">
 
-  Michelle Appleton
-  28 Jun 2020
+        <img class="object-cover object-left w-full h-56 xl:h-64 xl:w-56" src="/images/drawers.jpg" alt="Drawers">
 
-  Share
-  
-  <div class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
+        <!-- * Content * -->
+        <div class="w-full px-10 pt-8 xl:pt-5 pb-6">
+          <header
+            class="font-bold text-lg mb-4 xl:mb-2 text-grayish-veryDarkBlue text-justify xl:text-left tracking-tighter">
+            Shift the overall look and feel by adding these wonderful
+            touches to furniture in your home
+          </header>
+
+          <p class="text-sm xl:text-xs text-grayish-grayBlue text-left tracking-wide leading-relaxed mb-8 xl:mb-4">
+            Ever been in a room and felt like something was missing? Perhaps
+            it felt slightly bare and uninviting. I’ve got some simple tips
+            to help you make any room feel complete.
+          </p>
+
+          <div class="flex items-center">
+            <img class="w-10 h-10 rounded-full mr-4" src="/images/avatar-michelle.jpg" alt="Ava">
+
+            <footer class="flex flex-1 items-center">
+              <div class="flex-none w-32 xl:w-28">
+                <div class="text-sm xl:text-xs font-semibold text-grayish-darkBlue">
+                  Michelle Appleton
+                  <span class="text-grayish-grayBlue font-normal">28 Jun 2020</span>
+                </div>
+              </div>
+
+              <div class="flex flex-grow items-center justify-end">
+                <button type="button"
+                  class="flex items-center justify-center w-8 h-8 rounded-full bg-grayish-lightGrayBlue">
+                  <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
+                    <path fill="#6E8098"
+                      d="M15 6.495L8.766.014V3.88H7.441C3.33 3.88 0 7.039 0 10.936v2.049l.589-.612C2.59 10.294 5.422 9.11 8.39 9.11h.375v3.867L15 6.495z" />
+                  </svg>
+                </button>
+              </div>
+            </footer>
+
+          </div>
+        </div>
+        <!-- * End Content * -->
+
+      </div>
+    </div>
+    <!-- * End Card * -->
   </div>
+
+
+  <div class="attribution">
+    Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>.
+    Coded by <a href="#">Muhammad Rizky Firmansyah</a>.
+  </div>
+
 </body>
+
 </html>
