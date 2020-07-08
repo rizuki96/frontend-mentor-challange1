@@ -18500,18 +18500,17 @@ video {
   transition-delay: 1000ms;
 }
 
-div .tooltip {
-  display: block;
+.container .tooltip {
   width: 13rem;
-  background-color: black;
+  background-color: hsl(217, 19%, 35%);
   color: #fff;
   text-align: center;
   border-radius: 0.5rem;
   padding: 0.75rem 0;
   position: absolute;
   z-index: 1;
-  bottom: 30%;
-  right: 1rem;
+  bottom: 41%;
+  right: 21.2%;
 }
 
 div .tooltip::after {
@@ -18519,10 +18518,10 @@ div .tooltip::after {
   position: absolute;
   top: 100%;
   left: 50%;
-  margin-left: -5px;
-  border-width: 5px;
+  margin-left: -0.75rem;
+  border-width: 0.75rem;
   border-style: solid;
-  border-color: black transparent transparent transparent;
+  border-color: hsl(217, 19%, 35%) transparent transparent transparent;
 }
 
 @media (min-width: 640px) {

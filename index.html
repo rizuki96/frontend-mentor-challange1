@@ -22,60 +22,61 @@
       color: hsl(228, 45%, 44%);
     }
   </style>
+
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
 </head>
 
 <body class="font-manrope w-full h-screen bg-grayish-lightGrayBlue" style="font-size: 13px;">
 
-  <div class="container mx-auto p-10 ">
+  <div class="relative container mx-auto p-10 xl:px-32">
     <!-- * Card Container * -->
-    <div class="relative mx-56">
-      <div class="tooltip">
-        <div class="flex items-center justify-center">
-          <p class="uppercase text-xs tracking-widest font-light mr-4">Share</p>
-          <a href="#">
-            <img class="mr-4" src="/images/icon-facebook.svg" alt="facebook">
-          </a>
-          <a href="#">
-            <img class="mr-4" src="/images/icon-twitter.svg" alt="twitter">
-          </a>
-          <a href="#">
-            <img src="/images/icon-pinterest.svg" alt="pinterest">
-          </a>
-        </div>
-      </div>
-      <div class="my-6 xl:my-10 mx-auto bg-white rounded-lg max-w-xs xl:max-w-screen-sm
+    <div class="my-6 xl:my-10 mx-auto bg-white rounded-lg max-w-xs xl:max-w-screen-sm
                   overflow-hidden flex items-center flex-col xl:flex-row
                   justify-between shadow">
 
-        <img class="object-cover object-left w-full h-56 xl:h-64 xl:w-56" src="/images/drawers.jpg" alt="Drawers">
+      <img class="object-cover object-left w-full h-56 xl:h-64 xl:w-56" src="/images/drawers.jpg" alt="Drawers">
 
-        <!-- * Content * -->
-        <div class="w-full px-10 pt-8 xl:pt-5 pb-6">
-          <header
-            class="font-bold text-lg mb-4 xl:mb-2 text-grayish-veryDarkBlue text-justify xl:text-left tracking-tighter">
-            Shift the overall look and feel by adding these wonderful
-            touches to furniture in your home
-          </header>
+      <!-- * Content * -->
+      <div class="w-full px-10 pt-8 xl:pt-5 pb-6">
+        <header class="font-bold text-lg mb-4 xl:mb-2 text-grayish-veryDarkBlue text-left tracking-tight">
+          Shift the overall look and feel by adding these wonderful
+          touches to furniture in your home
+        </header>
 
-          <p class="text-sm xl:text-xs text-grayish-grayBlue text-left tracking-wide leading-relaxed mb-8 xl:mb-4">
-            Ever been in a room and felt like something was missing? Perhaps
-            it felt slightly bare and uninviting. I’ve got some simple tips
-            to help you make any room feel complete.
-          </p>
+        <p class="text-sm xl:text-xs text-grayish-grayBlue text-left tracking-wide leading-relaxed mb-8 xl:mb-4">
+          Ever been in a room and felt like something was missing? Perhaps
+          it felt slightly bare and uninviting. I’ve got some simple tips
+          to help you make any room feel complete.
+        </p>
 
-          <div class="flex items-center">
-            <img class="w-10 h-10 rounded-full mr-4" src="/images/avatar-michelle.jpg" alt="Ava">
+        <div class="flex items-center">
+          <img class="w-10 h-10 rounded-full mr-4" src="/images/avatar-michelle.jpg" alt="Ava">
 
-            <footer class="flex flex-1 items-center">
-              <div class="flex-none w-32 xl:w-28">
-                <div class="text-sm xl:text-xs font-semibold text-grayish-darkBlue">
-                  Michelle Appleton
-                  <span class="text-grayish-grayBlue font-normal">28 Jun 2020</span>
-                </div>
+          <footer class="flex flex-1 items-center">
+            <div class="flex-none w-32 xl:w-28">
+              <div class="text-sm xl:text-xs font-semibold text-grayish-darkBlue">
+                Michelle Appleton
+                <span class="text-grayish-grayBlue font-normal">28 Jun 2020</span>
               </div>
+            </div>
 
-              <div class="flex flex-grow items-center justify-end">
-                <button type="button"
+            <div class="flex flex-grow items-center justify-end">
+              <div x-data="{show: false}" @click.away="show = false">
+                <div class="tooltip hidden xl:block" x-show.transition.duration.500ms.opacity.0.scale.75="show">
+                  <div class="flex items-center justify-center">
+                    <p class="uppercase text-xs tracking-widest font-light mr-4 text-grayish-grayBlue">Share</p>
+                    <a href="#">
+                      <img class="mr-4 w-4 h-4" src="/images/icon-facebook.svg" alt="facebook">
+                    </a>
+                    <a href="#">
+                      <img class="mr-4 w-4 h-4" src="/images/icon-twitter.svg" alt="twitter">
+                    </a>
+                    <a href="#" class="w-4 h-4">
+                      <img src="/images/icon-pinterest.svg" alt="pinterest">
+                    </a>
+                  </div>
+                </div>
+                <button @click="show = ! show" type="button"
                   class="flex items-center justify-center w-8 h-8 rounded-full bg-grayish-lightGrayBlue">
                   <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16">
                     <path fill="#6E8098"
@@ -83,13 +84,13 @@
                   </svg>
                 </button>
               </div>
-            </footer>
+            </div>
+          </footer>
 
-          </div>
         </div>
-        <!-- * End Content * -->
-
       </div>
+      <!-- * End Content * -->
+
     </div>
     <!-- * End Card * -->
   </div>
