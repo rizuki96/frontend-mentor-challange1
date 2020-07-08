@@ -1,5 +1,8 @@
 module.exports = {
-  purge: [],
+  purge: [
+    'index.html',
+    './resources/css/app.css'
+  ],
   theme: {
     extend: {
       spacing: {
